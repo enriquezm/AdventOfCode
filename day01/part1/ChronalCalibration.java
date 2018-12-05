@@ -1,7 +1,7 @@
 import java.io.*;
 public class ChronalCalibration {
   public static void main(String[] args) throws Exception {
-    File file = new File("/Users/mylesenriquez/Development/java/advent_cal_1/puzzleInput.txt");
+    File file = new File("./puzzleInput.txt");
 
     BufferedReader br = new BufferedReader(new FileReader(file));
 
