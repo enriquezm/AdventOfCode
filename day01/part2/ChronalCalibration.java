@@ -13,7 +13,8 @@ public class ChronalCalibration {
       System.out.println(str);
       total = total + Integer.parseInt(str);
 
-      // TODO: If current freq is equal to stored freq, print out
+      // TODO: Consider using a hashmap data structure
+      // for every entry, check its key if value is > 1, return that key as the first freq occurance.
     }
     System.out.print("The total is: ");
     System.out.print(total);
