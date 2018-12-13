@@ -1,7 +1,12 @@
 import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Iterator;
+import java.util.Set;
+
 public class ChronalCalibration {
   public static void main(String[] args) throws Exception {
-    File file = new File("/Users/mylesenriquez/Development/java/advent_cal_1/puzzleInput.txt");
+    File file = new File("./puzzleInput.txt");
 
     BufferedReader br = new BufferedReader(new FileReader(file));
 
@@ -9,14 +14,28 @@ public class ChronalCalibration {
     int total = 0;
     int storedFrequency = 0;
 
-    while ( (str = br.readLine()) != null ) {
-      System.out.println(str);
-      total = total + Integer.parseInt(str);
+    // Create blank hashmap
+    HashMap<Integer, Integer> hmap = new HashMap<Integer, Integer>();
 
-      // TODO: Consider using a hashmap data structure
-      // for every entry, check its key if value is > 1, return that key as the first freq occurance.
+    // Read through each line
+    while ( (str = br.readLine()) != null ) {
+      // for each token in file, search to see if hash map contains key
+      if (hmap.containsKey(Integer.parseInt(str))) {
+        System.out.println("Contains " + Integer.toString(intToSearchFor));
+      }
+      // if contains key, check key's value
+        // if value is 2, return key
+      // else add kay to hashmap
     }
-    System.out.print("The total is: ");
-    System.out.print(total);
+    
+    
+    System.out.println("Before:" + hmap);
+    hmap.put(1, 0);
+    System.out.println("After:" + hmap);
+    int intToSearchFor = 1;
+    if (hmap.containsKey(intToSearchFor)) {
+      System.out.println("Contains " + Integer.toString(intToSearchFor));
+    }
+
   }
 }
